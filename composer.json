@@ -17,13 +17,13 @@
     "require": {
         "php": ">=5.3.3",
         "ext-json": "*",
-        "justinrainbow/json-schema": ">=1.0,<2.0-dev",
-        "seld/jsonlint": ">=1.0,<2.0-dev"
+        "justinrainbow/json-schema": "~4.0",
+        "seld/jsonlint": "~1.5"
     },
     "require-dev": {
         "herrera-io/phpunit-test-case": "1.*",
-        "mikey179/vfsStream": "1.1.0",
-        "phpunit/phpunit": "3.7.*"
+        "mikey179/vfsStream": "~1.6",
+        "phpunit/phpunit": "~5.6"
     },
     "autoload": {
         "files": ["src/lib/json_version.php"],
