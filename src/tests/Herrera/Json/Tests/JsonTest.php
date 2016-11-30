@@ -32,7 +32,7 @@ class JsonTest extends TestCase
             'Malformed UTF-8 characters, possibly incorrectly encoded.'
         );
 
-        $this->json->decode('{"bad": \"' . "\xf0\x28\x8c\x28" . '"}');
+        $this->json->decode('{"bad": "' . "\xB1\x31" . '"}');
     }
 
     public function testDecodeFailLint()
@@ -123,7 +123,7 @@ class JsonTest extends TestCase
             $this->json->validate($schema, $data);
         } catch (JsonException $exception) {
             $this->assertEquals(
-                array('static: boolean value found, but a string is required'),
+                array('static: Boolean value found, but a string is required'),
                 $exception->getErrors()
             );
         }
